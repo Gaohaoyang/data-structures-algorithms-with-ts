@@ -1,19 +1,17 @@
-class Arr {
-  private array: any[]
-
-  public length: number
-
-  constructor(args: [] | number = []) {
-    if (typeof args === 'number') {
-      const arr: undefined[] = []
-      for (let i = 0; i < args; i += 1) {
-        arr.push(undefined)
+class Arr extends Array {
+  /**
+   * matrix
+   */
+  public static matrix<T>(numRows: number, numCols: number, inital: T): T[][] {
+    const arr = []
+    for (let i = 0; i < numRows; i += 1) {
+      const cols = []
+      for (let j = 0; j < numCols; j += 1) {
+        cols[j] = inital
       }
-      this.array = arr
-    } else {
-      this.array = args
+      arr[i] = cols
     }
-    this.length = this.array.length
+    return arr
   }
 }
 

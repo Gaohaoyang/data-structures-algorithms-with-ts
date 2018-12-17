@@ -1,16 +1,19 @@
 import Arr from '../src/Arr'
 
-describe('create Arr', () => {
-  it('length', () => {
-    expect(new Arr([]).length).toBe(0)
+describe('matrix Arr', () => {
+  test('matrix init', () => {
+    expect(Arr.matrix(5, 5, 0)).toEqual([
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0],
+    ])
   })
-  it('length2', () => {
-    expect(new Arr([1, 2, 3, 4, 5]).length).toBe(5)
-  })
-  it('length3', () => {
-    expect(new Arr().length).toBe(0)
-  })
-  it('length4', () => {
-    expect(new Arr(10).length).toBe(10)
+
+  test('matrix set value and get value', () => {
+    const arr = Arr.matrix(6, 6, '')
+    arr[1][2] = 'cs'
+    expect(arr[1][2]).toBe('cs')
   })
 })
