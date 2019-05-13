@@ -1,4 +1,4 @@
-import Queue from '../src/Queues'
+import Queue from '../src/5Queues'
 
 describe('Queue', () => {
   const q = new Queue()

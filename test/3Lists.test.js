@@ -1,4 +1,4 @@
-import List from '../src/Lists'
+import List from '../src/3Lists'
 
 describe('Lists', () => {
   const list = new List()

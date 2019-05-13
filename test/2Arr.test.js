@@ -1,5 +1,5 @@
-import Arr from '../src/Arr'
-import arrTo2d from '../src/ArrTo2d'
+import Arr from '../src/2Arr'
+import arrTo2d from '../src/2ArrTo2d'
 
 describe('Arr', () => {
   test('matrix init', () => {
