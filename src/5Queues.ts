@@ -1,4 +1,12 @@
-// 队列
+/**
+ * 队列
+ * 包含5个主要api
+ * - enqueue
+ * - dequeue
+ * - front
+ * - back
+ * - isEmpty
+ */
 class Queue {
   constructor() {
     this.dataStore = []

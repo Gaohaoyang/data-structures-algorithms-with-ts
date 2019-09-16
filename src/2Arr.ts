@@ -1,6 +1,7 @@
 class Arr extends Array {
   /**
    * matrix
+   * 二维数组
    */
   public static matrix<T>(numRows: number, numCols: number, inital: T): T[][] {
     const arr = []

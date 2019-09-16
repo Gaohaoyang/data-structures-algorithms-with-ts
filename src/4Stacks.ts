@@ -1,4 +1,11 @@
-// 栈
+/**
+ * 栈
+ * 主要 api 有
+ * - push
+ * - pop
+ * - peek
+ * - clear
+ */
 class Stack {
   constructor() {
     this.dataStore = []

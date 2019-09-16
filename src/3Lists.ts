@@ -1,4 +1,18 @@
-// 列表
+/**
+ * 列表
+ * 主要 api 有
+ * - listSize
+ * - append
+ * - remove
+ * - find
+ * - insert
+ * - clear
+ * - contains
+ * - front
+ * - end
+ * - next
+ * - prev
+ */
 class List {
   constructor() {
     this.dataStore = []

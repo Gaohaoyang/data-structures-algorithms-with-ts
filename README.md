@@ -7,11 +7,11 @@
 执行单元测试
 
 ```
-yarn run t
+yarn t
 ```
 
 执行测试覆盖率
 
 ```
-yarn run tc
+yarn tc
 ```
