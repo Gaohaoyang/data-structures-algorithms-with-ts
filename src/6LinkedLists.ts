@@ -4,6 +4,8 @@
  * 主要 api 包含
  * - insert
  * - remove
+ *
+ * JavaScript 中的数组的主要问题是，它是使用对象来实现的，如果发现数组在实际使用时很慢，可以考虑用链表来代替
  */
 
 import Node from './6LinkedListsNode'
