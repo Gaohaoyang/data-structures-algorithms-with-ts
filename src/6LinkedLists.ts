@@ -14,7 +14,7 @@ class LinkedLists {
   /**
    * 头节点
    */
-  private head: Node
+  public head: Node
 
   constructor() {
     this.head = new Node('head')
@@ -70,13 +70,18 @@ class LinkedLists {
    * display
    */
   public display() {
-    let result: string = ''
+    const result: Array<Array<string>> = []
     let currNode = this.head
+    result.push([currNode.element, currNode.next.element])
     while (currNode.next) {
-      result += `,${currNode.next.element}`
       currNode = currNode.next
+      if (currNode.next) {
+        result.push([currNode.element, currNode.next.element])
+      } else {
+        result.push([currNode.element, currNode.next])
+      }
     }
-    return result.substr(1)
+    return result
   }
 }
 
