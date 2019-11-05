@@ -9,8 +9,14 @@ class DoublyLinkedList {
    */
   private head: Node
 
+  /**
+   * 当前节点
+   */
+  private curr: Node
+
   constructor() {
     this.head = new Node('head')
+    this.curr = this.head
   }
 
   /**
@@ -102,6 +108,47 @@ class DoublyLinkedList {
       }
     }
     return result
+  }
+
+  /**
+   * 在链表中移动 n 个节点
+   * @param n
+   */
+  public advance(n: number) {
+    let index = 0
+    while (index < n) {
+      this.curr = this.curr.next
+      index += 1
+    }
+  }
+
+  /**
+   * 在链表中反向移动 n 个节点
+   * @param n
+   */
+  public back(n: number) {
+    let index = 0
+    while (index < n) {
+      this.curr = this.curr.previous
+      index += 1
+    }
+  }
+
+  /**
+   * 只显示当前节点
+   */
+  public show() {
+    const res = []
+    if (this.curr.previous && this.curr.next) {
+      res.push(this.curr.previous.element, this.curr.element, this.curr.next.element)
+    } else if (this.curr.previous) {
+      res.push(this.curr.previous.element, this.curr.element, this.curr.next)
+    } else if (this.curr.next) {
+      res.push(this.curr.previous, this.curr.element, this.curr.next.element)
+    } else {
+      res.push(this.curr.previous, this.curr.element, this.curr.next)
+    }
+    return res
   }
 }
 

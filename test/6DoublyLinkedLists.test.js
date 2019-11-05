@@ -56,3 +56,38 @@ describe('DoublyLinkedList', () => {
     ])
   })
 })
+
+describe('advance back and show', () => {
+  const ll = new DoublyLinkedList()
+  test('should show', () => {
+    ll.insert('a1', 'head')
+    ll.insert('a2', 'head')
+    ll.insert('a3', 'head')
+    expect(ll.show()).toEqual([null, 'head', 'a3'])
+  })
+  test('should display', () => {
+    expect(ll.display()).toEqual([
+      [null, 'head', 'a3'],
+      ['head', 'a3', 'a2'],
+      ['a3', 'a2', 'a1'],
+      ['a2', 'a1', null],
+    ])
+  })
+  test('should advance show', () => {
+    ll.advance(2)
+    expect(ll.show()).toEqual(['a3', 'a2', 'a1'])
+  });
+  test('should back show', () => {
+    ll.back(1)
+    expect(ll.show()).toEqual(['head', 'a3', 'a2'])
+    ll.back(1)
+    expect(ll.show()).toEqual([null, 'head', 'a3'])
+    ll.advance(3)
+    expect(ll.show()).toEqual(['a2', 'a1', null])
+  });
+
+  const ll2 = new DoublyLinkedList()
+  test('should show', () => {
+    expect(ll2.show()).toEqual([null, 'head', null])
+  })
+})
