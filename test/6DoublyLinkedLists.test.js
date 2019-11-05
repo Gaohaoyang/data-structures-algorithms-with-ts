@@ -76,7 +76,7 @@ describe('advance back and show', () => {
   test('should advance show', () => {
     ll.advance(2)
     expect(ll.show()).toEqual(['a3', 'a2', 'a1'])
-  });
+  })
   test('should back show', () => {
     ll.back(1)
     expect(ll.show()).toEqual(['head', 'a3', 'a2'])
@@ -84,7 +84,7 @@ describe('advance back and show', () => {
     expect(ll.show()).toEqual([null, 'head', 'a3'])
     ll.advance(3)
     expect(ll.show()).toEqual(['a2', 'a1', null])
-  });
+  })
 
   const ll2 = new DoublyLinkedList()
   test('should show', () => {
